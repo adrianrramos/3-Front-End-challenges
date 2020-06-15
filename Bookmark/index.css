@@ -9,6 +9,7 @@ html {
 body {
   font-family: "Rubik", sans-serif;
   font-size: 18px;
+  margin: 0;
 }
 
 .blu-btn {
@@ -311,15 +312,69 @@ body {
 
 /*  EMAIL FOOTER */
 
-.email-bkg {
-  left: 0;
+.email-wrapper {
+  width: 25vw;
+  margin: 0 auto;
+  text-align: center;
+  padding: 40px 0;
+  color: white;
+}
+
+.email-title {
+  font-size: 1em;
+  text-transform: uppercase;
+}
+
+.email-desc {
+  font-weight: 500;
+  font-size: 2em;
+  margin-bottom: 50px;
+}
+
+.email-form {
+  padding-top: 35px;
+}
+
+.email-form > input {
+  height: 40px;
+  width: 300px;
+  padding-left: 15px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.email-form > input:focus {
+  outline: none;
+}
+
+.email-btn {
+  height: 40px;
+  width: 125px;
+  font-size: 16px;
+  color: white;
+  border-radius: 5px;
+  display: inline-block;
+  border: none;
+  background-color: hsl(0, 94%, 66%);
+  box-shadow: 0 5px 10px rgba(83, 104, 223, 0.137);
+}
+
+.email-btn:focus {
+  outline: none;
 }
 
 /* FOOTER */
-.ftr-cntr {
+
+footer {
+  background-color: hsl(231, 69%, 60%);
+  left: 0;
   position: absolute;
   width: 100%;
-  left: 0;
+}
+
+.ftr-cntr {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -354,4 +409,158 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media only screen and (max-width: 600px) {
+  .header-interact {
+    display: none;
+  }
+
+  .header {
+    margin: 0;
+  }
+
+  .content-cntr {
+    margin: 0;
+  }
+
+  .top-row {
+    flex-direction: column-reverse;
+  }
+
+  .top-panel1 {
+    width: 90%;
+    text-align: center;
+  }
+
+  .top-btn {
+    width: 40%;
+  }
+
+  .top-btn:focus {
+    outline: none;
+  }
+
+  .tp-l {
+    border: none;
+    color: white;
+    background-color: hsl(231, 69%, 60%);
+  }
+
+  .tp-l:focus {
+    color: white;
+  }
+
+  .tp-r {
+    border: none;
+    color: hsl(229, 8%, 60%);
+    background-color: white;
+  }
+
+  .top-panel2 > img {
+    width: 100%;
+  }
+
+  .blue-blob {
+    height: 200px;
+    width: 80%;
+  }
+
+  .right {
+    margin: 65px 0;
+  }
+
+  .txt-dvdr {
+    width: 90%;
+  }
+
+  .txt-dvdr-title {
+    font-size: 1.5em;
+  }
+
+  .txt-dvdr > p {
+    font-size: 0.9em;
+    line-height: 25px;
+  }
+
+  .tb-cntr {
+    height: 100%;
+  }
+
+  .tb-selectors {
+    width: 90%;
+    flex-direction: column;
+    text-align: center;
+    border: none;
+    border-top: 1px solid hsla(229, 8%, 60%, 0.5);
+  }
+
+  .tbSelector {
+    width: 100%;
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.5);
+    position: relative;
+  }
+
+  .tbSelector:focus {
+    border-bottom: 1px solid hsla(229, 8%, 60%, 0.5);
+  }
+
+  .tbSelector:focus:before {
+    content: "";
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    height: 15px;
+    width: 40%;
+    border-bottom: 3px solid hsl(0, 94%, 66%);
+  }
+
+  .tbPage-content {
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tb-content {
+    width: 90%;
+    text-align: center;
+  }
+
+  .tb-content > img {
+    width: 100%;
+    margin-bottom: 60px;
+  }
+
+  .tb-content > p {
+    margin: 0;
+  }
+
+  .cards-row {
+    height: 100%;
+    width: 90%;
+    flex-direction: column;
+  }
+
+  .card-cntr {
+    margin-top: 50px;
+    align-self: center !important;
+  }
+
+  .card1 {
+    margin-top: 0;
+  }
+
+  .faq-row {
+    width: 90%;
+  }
+
+  .info-btn {
+    margin: 40px 0;
+  }
+
+  .email-wrapper {
+    width: 90%;
+  }
 }
