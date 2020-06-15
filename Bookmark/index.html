@@ -9,32 +9,38 @@
       sizes="32x32"
       href="./images/favicon-32x32.png"
     />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="index.css" />
     <title>Bookmark</title>
   </head>
   <body>
     <div class="header">
       <div class="header-logo">
         <img
-          src="./images/logo-bookmark.svg"
+          src="./images/logo-bookmark-black.svg"
           alt="Bookmark logo"
           class="page-logo"
         />
       </div>
       <div class="header-interact">
-        <p class="header-page">
+        <p class="header-page route-txt">
           Features
         </p>
-        <p class="header-page">
+        <p class="header-page route-txt">
           Pricing
         </p>
-        <p class="header-page">
+        <p class="header-page route-txt">
           Contact
         </p>
-        <buttton class="header-login">
+        <button class="header-login pg-btn">
           Login
-        </buttton>
+        </button>
       </div>
     </div>
+    <div class="blue-blob right"></div>
     <div class="content-cntr">
       <div class="top-row">
         <div class="top-panel1">
@@ -56,10 +62,9 @@
         <div class="top-panel2">
           <img src="./images/illustration-hero.svg" alt="hero still" />
         </div>
-        <div class="blue-blob"></div>
       </div>
       <div class="txt-dvdr">
-        <h2 class="txt-dvdr-title">Features</h2>
+        <h1 class="txt-dvdr-title">Features</h1>
         <p class="txt-dvdr-content">
           Our aim is to make it quick and easy for you to access your favourite
           websites. Your bookmarks sync between your devices so you can access
@@ -67,80 +72,90 @@
         </p>
       </div>
       <div class="tb-cntr">
-        <div class="blue-blob"></div>
         <div class="tb-selectors">
-          <div class="tb-selector">
+          <button
+            class="tbSelector"
+            id="defaultOpen"
+            onclick="openPage('bookmark')"
+          >
             Simple Bookmarking
-          </div>
-          <div class="tb-selector">
+          </button>
+          <button class="tbSelector" onclick="openPage('search')">
             Speedy Searching
-          </div>
-          <div class="tb-selector">
+          </button>
+          <button class="tbSelector" onclick="openPage('share')">
             Easy Sharing
+          </button>
+        </div>
+        <div class="blue-blob left"></div>
+        <div class="tbPage" id="bookmark">
+          <div class="tbPage-content">
+            <div class="tb-content">
+              <img
+                src="./images/illustration-features-tab-1.svg"
+                alt="tab still"
+                class="tb-img"
+              />
+            </div>
+            <div class="tb-content">
+              <h2 class="tb-title">
+                Bookmark in one click
+              </h2>
+              <p>
+                Organize your bookmarks however you like. Our simple
+                drag-and-drop interface gives you complete control over how you
+                manage your favourite sites.
+              </p>
+              <button class="info-btn blu-btn">
+                More Info
+              </button>
+            </div>
           </div>
         </div>
-        <div class="tb-page">
-          <div class="tb-page-panel1">
-            <img
-              src="./images/illustration-features-tab-1.svg"
-              alt="tab still"
-              class="tb-img"
-            />
-          </div>
-          <div class="tb-page-panel2">
-            <h2 class="tb-title">
-              Bookmark in one click
-            </h2>
-            <p class="tb-content">
-              Organize your bookmarks however you like. Our simple drag-and-drop
-              interface gives you complete control over how you manage your
-              favourite sites.
-            </p>
-            <button class="tb-btn">
-              More Info
-            </button>
-          </div>
-        </div>
-        <div class="tb-page">
-          <div class="tb-page-panel1">
-            <img
-              src="./images/illustration-features-tab-2.svg"
-              alt="tab still"
-              class="tb-img"
-            />
-          </div>
-          <div class="tb-page-panel2">
-            <h2 class="tb-title">
-              Intelligent search
-            </h2>
-            <p class="tb-content">
-              Our powerful search feature will help you find saved sites in no
-              time at all. No need to trawl through all of your bookmarks.
-            </p>
-            <button class="tb-btn">
-              More Info
-            </button>
+        <div class="tbPage" id="search">
+          <div class="tbPage-content">
+            <div class="tb-content">
+              <img
+                src="./images/illustration-features-tab-2.svg"
+                alt="tab still"
+                class="tb-img"
+              />
+            </div>
+            <div class="tb-content">
+              <h2 class="tb-title">
+                Intelligent search
+              </h2>
+              <p>
+                Our powerful search feature will help you find saved sites in no
+                time at all. No need to trawl through all of your bookmarks.
+              </p>
+              <button class="info-btn blu-btn">
+                More Info
+              </button>
+            </div>
           </div>
         </div>
-        <div class="tb-page">
-          <div class="tb-page-panel1">
-            <img
-              src="./images/illustration-features-tab-3.svg"
-              alt="tab still"
-              class="tb-img"
-            />
-          </div>
-          <div class="tb-page-panel2">
-            <h2 class="tb-title">
-              Share your bookmarks
-            </h2>
-            <p class="tb-content">
-              Easily share your bookmarks and collections with others. Create a
-              shareable link that you can send at the click of a button.
-            </p>
-            <button class="tb-btn">
-              More Info
-            </button>
+        <div class="tbPage" id="share">
+          <div class="tbPage-content">
+            <div class="tb-content">
+              <img
+                src="./images/illustration-features-tab-3.svg"
+                alt="tab still"
+                class="tb-img"
+              />
+            </div>
+            <div class="tb-content">
+              <h2 class="tb-title">
+                Share your bookmarks
+              </h2>
+              <p>
+                Easily share your bookmarks and collections with others. Create
+                a shareable link that you can send at the click of a button.
+              </p>
+              <button class="info-btn blu-btn">
+                More Info
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -151,67 +166,73 @@
           you’ve got a favourite you’d like us to prioritize.
         </p>
       </div>
-      <div class="3cards-row">
-        <div class="card-cntr">
+      <div class="cards-row">
+        <div class="card-cntr card1">
           <img
             src="./images/logo-chrome.svg"
             alt="chrome logo"
             class="card-logo"
           />
-          <h4 class="card-title">
-            Add to Chrome
-          </h4>
-          <p class="card-content">
-            Minimum version 62
-          </p>
+          <div class="card-content">
+            <h4 class="card-title">
+              Add to Chrome
+            </h4>
+            <p class="card-desc">
+              Minimum version 62
+            </p>
+          </div>
           <img
             src="./images/bg-dots.svg"
             alt="dots divider"
             class="card-dots"
           />
-          <button class="card-btn">
+          <button class="card-btn blu-btn">
             Add & Install Extension
           </button>
         </div>
-        <div class="card-cntr">
+        <div class="card-cntr card2">
           <img
             src="./images/logo-firefox.svg"
             alt="firefox logo"
             class="card-logo"
           />
-          <h4 class="card-title">
-            Add to Firefox
-          </h4>
-          <p class="card-content">
-            Minimum version 55
-          </p>
+          <div class="card-content">
+            <h4 class="card-title">
+              Add to Firefox
+            </h4>
+            <p class="card-desc">
+              Minimum version 55
+            </p>
+          </div>
           <img
             src="./images/bg-dots.svg"
             alt="dots divider"
             class="card-dots"
           />
-          <button class="card-btn">
+          <button class="card-btn blu-btn">
             Add & Install Extension
           </button>
         </div>
-        <div class="card-cntr">
+        <div class="card-cntr card3">
           <img
             src="./images/logo-opera.svg"
             alt="opera logo"
             class="card-logo"
           />
-          <h4 class="card-title">
-            Add to Opera
-          </h4>
-          <p class="card-content">
-            Minimum version 46
-          </p>
+          <div class="card-content">
+            <h4 class="card-title">
+              Add to Opera
+            </h4>
+            <p class="card-desc">
+              Minimum version 46
+            </p>
+          </div>
           <img
             src="./images/bg-dots.svg"
             alt="dots divider"
             class="card-dots"
           />
-          <button class="card-btn">
+          <button class="card-btn blu-btn">
             Add & Install Extension
           </button>
         </div>
@@ -225,20 +246,26 @@
       </div>
       <div class="faq-row">
         <div class="faq-box">
-          <div class="faq-q">
-            What is Bookmark?
+          <div class="faq-q questionSelector" id="defaultOpenQ" onclick="openFaq('a1', 'arrow1')">
+            <span>
+              What is Bookmark?
+            </span>
+            <div class="faq-arrow" id="arrow1"></div>
           </div>
-          <div class="faq-a">
+          <div class="faq-a  answerBlock" id="a1">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce
             tincidunt justo eget ultricies fringilla. Phasellus blandit ipsum
             quis quam ornare mattis.
           </div>
         </div>
         <div class="faq-box">
-          <div class="faq-q">
-            How can I request a new browser?
+          <div class="faq-q questionSelector" onclick="openFaq('a2', 'arrow2')">
+            <span>
+              How can I request a new browser?
+            </span>
+            <div class="faq-arrow" id="arrow2"></div>
           </div>
-          <div class="faq-a">
+          <div class="faq-a  answerBlock" id="a2">
             Vivamus luctus eros aliquet convallis ultricies. Mauris augue massa,
             ultricies non ligula. Suspendisse imperdiet. Vivamus luctus eros
             aliquet convallis ultricies. Mauris augue massa, ultricies non
@@ -248,10 +275,13 @@
           </div>
         </div>
         <div class="faq-box">
-          <div class="faq-q">
-            Is there a mobile app?
+          <div class="faq-q questionSelector" onclick="openFaq('a3', 'arrow3')">
+            <span>
+              Is there a mobile app?
+            </span>
+            <div class="faq-arrow" id="arrow3"></div>
           </div>
-          <div class="faq-a">
+          <div class="faq-a  answerBlock" id="a3">
             Sed consectetur quam id neque fermentum accumsan. Praesent luctus
             vestibulum dolor, ut condimentum urna vulputate eget. Cras in ligula
             quis est pharetra mattis sit amet pharetra purus. Sed sollicitudin
@@ -259,42 +289,75 @@
           </div>
         </div>
         <div class="faq-box">
-          <div class="faq-q">
-            What about other Chromium browsers?
+          <div class="faq-q questionSelector" onclick="openFaq('a4', 'arrow4')">
+            <span>
+              What about other Chromium browsers?
+            </span>
+            <div class="faq-arrow" id="arrow4"></div>
           </div>
-          <div class="faq-a">
+          <div class="faq-a  answerBlock" id="a4" >
             Integer condimentum ipsum id imperdiet finibus. Vivamus in placerat
             mi, at euismod dui. Aliquam vitae neque eget nisl gravida
             pellentesque non ut velit. More Info 35,000+ already joined Stay
             up-to-date with what we’re doing Contact Us Features Pricing Contact
           </div>
         </div>
-        <button class="faq-btn">
+      </div>
+      <div class="position-btn">
+        <button class="info-btn blu-btn">
           More Info
         </button>
       </div>
     </div>
-    <div class="footer-form"></div>
   </body>
   <footer>
-    <div class="footer-content">
-      <img
-        src="./images/logo-bookmark.svg"
-        alt="bookmark logo"
-        class="footer-logo"
-      />
+    <div class="email-bkg">
+      <div class="email-wrapper">
+        <div class="email-cntr">
+          <p class="email-title">
+            35,000 + already joined
+          </p>
+          <span class="email-desc">
+            Stay up-to-date with what we're doing
+          </span>
+          <div class="email-form">
+            <input type="text" class="email-txt-input">
+            <button class="email-btn">Contact</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <p class="footer-txt">
-      Features
-    </p>
-    <p class="footer-txt">
-      Pricing
-    </p>
-    <p class="footer-txt">
-      Contact
-    </p>
-    <div class="footer-socials">
-      <!-- FIXME: social media logos fail to import -->
-    </div>
-  </footer>
+    <div class="ftr-cntr">
+          <div class="ftr-wrapper">
+            <div class="footer-content">
+                <div class="ft-logo-box">
+                  <img
+                    src="./images/logo-bookmark-white.svg"
+                    alt="bookmark logo"
+                    class="footer-logo"
+        
+                  />
+                </div>
+                <div class="header-interact">
+                  <p class="ft-txt route-txt">
+                    Features
+                  </p>
+                  <p class="ft-txt route-txt">
+                    Pricing
+                  </p>
+                  <p class="ft-txt route-txt">
+                    Contact
+                  </p>
+                </div>
+              </div>
+              <div class="footer-socials">
+                <!-- FIXME: social media logos fail to import -->
+                <img src="./images/icon-facebook.svg" alt="facebook logo" />
+                <img src="./images/icon-twitter.svg" alt="twitter logo" />
+              </div>
+          </div>
+          </div>
+        </div>
+      </footer>
+  <script src="./index.js"></script>
 </html>
